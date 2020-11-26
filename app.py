@@ -46,9 +46,7 @@ def model_predict(img_path, model):
     x = np.expand_dims(x, axis=0)
    
 
-    # Be careful how your trained model deals with the input
-    # otherwise, it won't make correct prediction!
-    x = preprocess_input(x)
+   
 
     preds = model.predict(x)
     preds=np.argmax(preds, axis=1)
